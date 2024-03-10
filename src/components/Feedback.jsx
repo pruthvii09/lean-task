@@ -17,7 +17,7 @@ const Feedback = () => {
     setShowForm(true);
   };
   return (
-    <div className="absolute z-50 sm:bottom-8 sm:right-8 bottom-6 right-6 flex flex-col items-end gap-4">
+    <div className="fixed z-50 sm:bottom-8 sm:right-8 bottom-6 right-6 flex flex-col items-end gap-4">
       {showForm && <ReportForm type={type} />}
       <div
         className={`flex gap-4 items-end justify-end ${
