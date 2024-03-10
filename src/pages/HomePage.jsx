@@ -3,13 +3,17 @@ import Navbar from "../components/Navbar";
 import RocketIcon from "../icons/RocketIcon";
 import EyeIcon from "../icons/EyeIcon";
 import AlertCircle from "../icons/AlertCircle";
+import MoveLeft from "../icons/MoveLeft";
 
 const HomePage = () => {
   return (
     <div>
       <Navbar />
       <div className="sm:px-20 px-4 py-10">
-        <div className="mb-4">Back to Questions</div>
+        <div className="mb-4 cursor-pointer flex items-center gap-3 text-white">
+          <MoveLeft />
+          <p>Back to Questions</p>
+        </div>
         <div className="sm:px-20 px-1">
           <div className="bg-[#F8F8F8] p-4 text-black rounded-md">
             <div className="flex items-center justify-between">
@@ -34,13 +38,13 @@ const HomePage = () => {
               magna cursus se?{" "}
             </p>
             <div className="flex items-center justify-between mt-4">
-              <div className="flex items-center gap-2">
+              <div className="flex sm:flex-row flex-col items-center gap-2">
                 <EyeIcon />
-                <p>100 Views</p>
+                <p className="text-center">100 Views</p>
               </div>
-              <div className="flex items-center gap-1">
+              <div className="flex sm:flex-row flex-col items-center gap-1">
                 <AlertCircle />
-                <p>How should you word your answer?</p>
+                <p className="text-center">How should you word your answer?</p>
               </div>
             </div>
           </div>

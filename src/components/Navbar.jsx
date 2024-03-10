@@ -3,9 +3,9 @@ import React from "react";
 const Navbar = () => {
   return (
     <div className="flex text-white items-center justify-between py-4 px-8 border-b-2 border-gray-800">
-      <div className="font-bold sm:text-base text-sm">
+      <a href="/" className="font-bold cursor-pointer sm:text-base text-sm">
         THE <span className="bg-white text-black px-1">PRODUCT</span> PLATFORM
-      </div>
+      </a>
       <div className="flex items-center justify-evenly gap-6">
         <div className="cursor-pointer sm:block hidden">Learn</div>
         <div className="cursor-pointer sm:block hidden">Practice</div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import AttachIcon from "../icons/AttachIcon";
+import { motion } from "framer-motion";
 
 const ReportForm = ({ type }) => {
   const [issue, setIssue] = useState("");
@@ -24,7 +25,12 @@ const ReportForm = ({ type }) => {
   };
 
   return (
-    <div className="sm:w-80 w-72 bg-[#F8F8F8] px-3 py-4 rounded-md">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="sm:w-80 w-72 bg-[#F8F8F8] px-3 py-4 rounded-md"
+    >
       <div className="text-wrap font-bold text-center pb-3 px-5 border-b-[1.5px] border-[#CCCCCC] text-[#4D4D4D] ">
         {type === "Feedback" ? (
           <div>
@@ -42,10 +48,15 @@ const ReportForm = ({ type }) => {
               <div>
                 {type === "Issue" ? (
                   <div>
-                    Let us know about the Issue you are facing right now!
+                    Let us know about the{" "}
+                    <span className="text-black">Issue</span> you are facing
+                    right now!
                   </div>
                 ) : (
-                  <div>Get in Contact with us for your queries!</div>
+                  <div>
+                    Get in <span className="text-black">Contact with us</span>{" "}
+                    for your queries!
+                  </div>
                 )}
               </div>
             )}
@@ -72,6 +83,7 @@ const ReportForm = ({ type }) => {
             <label className="mb-1">Your Name</label>
             <input
               type="text"
+              placeholder="Your Name.."
               className="w-full bg-[#E0E0E0] px-2 py-1 outline-none rounded-md"
             />
           </div>
@@ -168,7 +180,7 @@ const ReportForm = ({ type }) => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

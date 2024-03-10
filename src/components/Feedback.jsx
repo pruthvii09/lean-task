@@ -35,7 +35,11 @@ const Feedback = () => {
             )}
             <button
               onClick={() => handleForm("Issue")}
-              className="w-12  h-12 bg-[#F8F8F8] rounded-full shadow-md flex items-center justify-center"
+              className={`w-12 h-12 ${
+                type === "Issue"
+                  ? "outline outline-gray-700 outline-offset-4"
+                  : ""
+              } bg-[#F8F8F8] rounded-full shadow-md flex items-center justify-center`}
             >
               <FlagIcon />
             </button>
@@ -46,7 +50,11 @@ const Feedback = () => {
             )}
             <button
               onClick={() => handleForm("Feedback")}
-              className="w-12 h-12 bg-[#F8F8F8] rounded-full shadow-md flex items-center justify-center"
+              className={`w-12 h-12 ${
+                type === "Feedback"
+                  ? "outline outline-gray-700 outline-offset-4"
+                  : ""
+              } bg-[#F8F8F8] rounded-full shadow-md flex items-center justify-center`}
             >
               <LikeIcon />
             </button>
@@ -57,7 +65,11 @@ const Feedback = () => {
             )}
             <button
               onClick={() => handleForm("Suggestions")}
-              className="w-12 h-12 bg-[#F8F8F8] rounded-full shadow-md flex items-center justify-center"
+              className={`w-12 h-12 ${
+                type === "Suggestions"
+                  ? "outline outline-gray-700 outline-offset-4"
+                  : ""
+              } bg-[#F8F8F8] rounded-full shadow-md flex items-center justify-center`}
             >
               <Editicon />
             </button>
@@ -68,7 +80,11 @@ const Feedback = () => {
             )}
             <button
               onClick={() => handleForm("Your quries")}
-              className="w-12 h-12 bg-[#F8F8F8] rounded-full shadow-md flex items-center justify-center"
+              className={`w-12 h-12 ${
+                type === "Your quries"
+                  ? "outline outline-gray-700 outline-offset-4"
+                  : ""
+              } bg-[#F8F8F8] rounded-full shadow-md flex items-center justify-center`}
             >
               <FeedBackIcon />
             </button>
@@ -80,6 +96,7 @@ const Feedback = () => {
             onClick={() => {
               setOpen(false);
               setShowForm(false);
+              setType("");
             }}
             className="w-12 h-12  bg-[#F8F8F8] rounded-full shadow-md flex items-center justify-center"
           >
